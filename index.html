@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Shadow</title>
+
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <h1><a href="./">CSS TextShadow Editor</a></h1>
+    <div id="test" style="display: none;">test</div>
+    <button id="text">text</button>
+    <nav class="menu-bar">
+        <div style="display: none;"><a id="gallery" href="collection.html">Gradients Gallery</a>
+            <button id="mini-show">show</button>
+            <button id="gradient">gradient</button>
+            <button id="do">do</button>
+            <div class="current" style="color: #bc2e1e; background: #edde9c; text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;">Comic</div>
+        </div>
+        <div class="l-pull-right">
+            <a id="report-bug-btn" class="btn-type-3" title="feedback" href="./contact" target="_blank">
+                    Report Bug/Request Feature</a>
+            <button id="get-css-btn" class="btn-type-2"><span class="get-css"></span>Get CSS</button>
+        </div>
+    </nav>
+
+    <section class="col">
+        <div class="panel">
+            <div class="panel__heading">
+                <h2>Presets</h2>
+                <button id="import-css-btn">Import</button>
+                <button id="save-preset-btn">Save</button>
+                <button id="delete-preset-btn">Delete</button>
+                <div class="panel__toggle toggle-on"></div>
+            </div>
+            <div class="panel__body">
+                <ul class="presets-list">
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="col">
+        <div class="panel">
+            <div class="panel__heading">
+                <h2>Preview</h2>
+                <div class="panel__toggle toggle-on"></div>
+            </div>
+            <div class="panel__body">
+                <div id="textShadowPreview" contenteditable="true" spellcheck="false">PREVIEW</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="col" style="width: 50%; float: left;">
+        <div class="panel">
+            <div class="panel__heading">
+                <h2>Properties</h2>
+                <div class="panel__toggle toggle-on"></div>
+            </div>
+            <div class="panel__body">
+                <div class="l-row-p15">
+                    <label for="" class="setting__property">Color:</label>
+                    <input type="text" name="textColor" id="textColor">
+                </div>
+                <div class="l-row-p15">
+                    <label for="" class="setting__property">Background Color:</label>
+                    <input type="text" name="backgroundColor" id="backgroundColor">
+                </div>
+
+                <div class="l-row-p15">
+                    <label class="setting__property">Font Size:</label>
+                    <div class="slider-bar" id="font-size"></div>
+                </div>
+                <div class="l-row-p15">
+                    <label class="setting__property">Letter Spacing:</label>
+                    <div class="slider-bar" id="letter-spacing"></div>
+                </div>
+                <div class="l-row-p15">
+                    <label class="setting__property">Word Spacing:</label>
+                    <div class="slider-bar" id="word-spacing"></div>
+                </div>
+
+                <div class="l-row-p15">
+                    <label class="setting__property">Font Family:</label>
+                    <select name="google-fonts" id="google-fonts"></select>
+                </div>
+                <div class="l-row-p15">
+                    <label for="" class="setting__property">Weight:</label>
+                    <button class="setting__value" data-property="fontWeight" data-value="normal">Normal</button>
+                    <button class="setting__value" data-property="fontWeight" data-value="bold">Bold</button>
+                </div>
+                <div class="l-row-p15">
+                    <label for="" class="setting__property">Decoration:</label>
+                    <button class="setting__value" data-property="textDecoration" data-value="none">None</button>
+                    <button class="setting__value" data-property="textDecoration" data-value="underline">Underline</button>
+                    <button class="setting__value" data-property="textDecoration" data-value="overline">Overline</button>
+                    <button class="setting__value" data-property="textDecoration" data-value="line-through">Line-Through</button>
+                </div>
+                <div class="l-row-p15">
+                    <label for="" class="setting__property">Style:</label>
+                    <button class="setting__value" data-property="fontStyle" data-value="normal">Normal</button>
+                    <button class="setting__value" data-property="fontStyle" data-value="unset">Unset</button>
+                    <button class="setting__value" data-property="fontStyle" data-value="italic">Italic</button>
+                    <button class="setting__value" data-property="fontStyle" data-value="oblique">Oblique</button>
+                </div>
+                <div class="l-row-p15">
+                    <label for="" class="setting__property">Variant:</label>
+                    <button class="setting__value" data-property="fontVariant" data-value="normal">Normal</button>
+                    <button class="setting__value" data-property="fontVariant" data-value="small-caps">Small Caps</button>
+                </div>
+                <div class="l-row-p15">
+                    <label for="" class="setting__property">Transform:</label>
+                    <button class="setting__value" data-property="textTransform" data-value="none">None</button>
+                    <button class="setting__value" data-property="textTransform" data-value="uppercase">Uppercase</button>
+                    <button class="setting__value" data-property="textTransform" data-value="lowercase">Lowercase</button>
+                    <button class="setting__value" data-property="textTransform" data-value="capitalize">Capitalize</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="col" style="width: 50%; float: right;">
+        <div class="panel">
+            <div class="panel__heading">
+                <h2>Shadows</h2>
+                <div class="panel__toggle toggle-on"></div>
+            </div>
+            <div class="panel__body">
+                <div class="shadows__heading"><span>offset-x</span><span>offset-y</span><span>blur-radius</span></div>
+                <ul class="shadows__container"></ul>
+                <div>
+                    <div><a id="add-shadow-btn" class="btn-type-3">Add Shadow</a></div>
+                    <div id="add-shadow">
+                        <textarea id="add-shadow__input"></textarea>
+                        <div>
+                            <button id="add-shadow-accept">accept</button>
+                            <button id="add-shadow-cancel">cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="adjust-color" style="display: none;">
+                    <div class="adjust-color__center">
+                        <div class="adjust-color__settings">
+                            <div class="l-col-w254" style="float: left;">
+                                <div class="l-setting-block">
+                                    <div class="l-spinner-row">
+                                        <label for="hue">Hue</label>
+                                        <div class="text-1">
+                                            <input id="hue" type="text" value="0" />
+                                        </div>
+                                    </div>
+                                    <div class="slider-bar hsl-slider" id="hue-bar"></div>
+                                </div>
+                                <div class="l-setting-block">
+                                    <div class="l-spinner-row">
+                                        <label for="lightness">Lightness</label>
+                                        <div class="text-1">
+                                            <input id="lightness" type="text" value="0" />
+                                        </div>
+                                    </div>
+                                    <div class="slider-bar hsl-slider" id="lightness-bar"></div>
+                                </div>
+                            </div>
+                            <div class="l-col-w254">
+                                <div class="l-setting-block">
+                                    <div class="l-spinner-row">
+                                        <label for="saturation">Saturation</label>
+                                        <div class="text-1">
+                                            <input id="saturation" type="text" value="0" />
+                                        </div>
+                                    </div>
+                                    <div class="slider-bar hsl-slider" id="saturation-bar"></div>
+                                </div>
+                                <div class="l-setting-block">
+                                    <div class="l-spinner-row">
+                                        <label for="opacity">Opacity</label>
+                                        <div class="text-1">
+                                            <input id="opacity" type="text" value="0" />
+                                        </div>
+                                    </div>
+                                    <div class="slider-bar hsl-slider" id="opacity-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button id="adjust-color-accept">accept</button>
+                            <button id="adjust-color-cancel" style="float: right;">cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li id="copy-right"> &copy; 2021 www.csstextshadoweditor.com</li>
+            <li><a href="./about">About</a> </li>
+            <li><a href="./contact">Contact</a></li>
+            <li><a href="./terms">Terms of Use</a></li>
+            <li><a href="./privacy">Privacy Policy</a></li>
+        </ul>
+    </footer>
+</body>
+<div id="import-css-dialog">
+    <textarea name="import-css-area" id="import-css-area"></textarea>
+    <button id="import-css-btn-ok">Import</button>
+</div>
+<div id="get-css-dialog">
+    <div id="show-code"></div>
+    <label for="color-format">format:</label>
+    <select id="color-format">
+            <option value="hex">hex</option>
+            <option value="hsla">hsla</option>
+            <option value="rgba">rgba</option>
+        </select>
+    <button class="btn-type-2" id="get-copy-css" data-clipboard-target="#show-code"><span></span>Copy to Clipboard</button>
+    <div class="l-pull-right"><button class="btn-share"></button><button class="btn-share"></button><button class="btn-share"></button></div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
+<script src="presets.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
