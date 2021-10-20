@@ -526,4 +526,5 @@
  .main {
      width: 1380px;
      margin: auto;
+     overflow: hidden;
  }
