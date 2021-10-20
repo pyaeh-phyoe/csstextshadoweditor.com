@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css">
-    <link rel="stylesheet" type="text/css" href="style.min.css">
+    <link rel="stylesheet" type="text/css" href="text-shadow.css">
 </head>
 
 <body>
@@ -36,10 +36,12 @@
         <div class="panel">
             <div class="panel__heading">
                 <h2>Presets</h2>
-                <button id="import-css-btn">Import</button>
-                <button id="save-preset-btn">Save</button>
-                <button id="delete-preset-btn">Delete</button>
-                <div class="panel__toggle toggle-on"></div>
+                <div class="l-pull-right">
+                    <a class="btn-type-3" id="import-css-btn"><span class="import-css"></span>Import</a>
+                    <button class="btn-type-2" id="save-preset-btn"><span class="save-preset"></span>Save</button>
+                    <button class="btn-type-2" id="delete-preset-btn"><span class="delete-preset"></span>Delete</button>
+                    <div class="panel__toggle toggle-on"></div>
+                </div>
             </div>
             <div class="panel__body">
                 <ul class="presets-list">
@@ -77,25 +79,72 @@
 
                 <div class="l-row-p15">
                     <label class="setting__property">Font Size:</label>
-                    <div class="slider-bar" id="font-size"></div>
+                    <div style="display: inline-block;">
+                        <div class="text-1">
+                            <input type="text" id="font-size">
+                        </div>
+
+                        <div>
+                            <div class="slider-bar" id="font-size-slider"></div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="l-row-p15">
                     <label class="setting__property">Letter Spacing:</label>
-                    <div class="slider-bar" id="letter-spacing"></div>
+                    <div style="display: inline-block;">
+                        <div class="text-1">
+                            <input type="text" name="letter-spacing" id="letter-spacing">
+                            <input type="checkbox" id="letter-spacing-normal"><label>Normal</label>
+                        </div>
+                        <div>
+                            <div class="slider-bar" id="letter-spacing-slider"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="l-row-p15">
                     <label class="setting__property">Word Spacing:</label>
-                    <div class="slider-bar" id="word-spacing"></div>
+                    <div style="display: inline-block;">
+                        <div class="text-1">
+                            <input type="text" name="word-spacing" id="word-spacing">
+                            <input type="checkbox" id="word-spacing-normal"><label>Normal</label>
+                        </div>
+                        <div>
+                            <div class="slider-bar" id="word-spacing-slider"></div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="l-row-p15">
                     <label class="setting__property">Font Family:</label>
-                    <select name="google-fonts" id="google-fonts"></select>
+                    <div>
+
+                        <!--
+                    <ul id="menu">
+                        <li>
+                            <div>Google Fonts</div>
+                             <ul id="google-fonts">
+          <li><div>Alternative</div></li>
+          <li><div>Classic</div></li>
+        </ul>
+                        </li>
+                        <li><div>Impact</div></li>
+                        <li><div>Lucida</div></li>
+                    </ul>-->
+                        <select name="google-fonts" id="google-fonts"></select>
+
+                    </div>
                 </div>
                 <div class="l-row-p15">
                     <label for="" class="setting__property">Weight:</label>
-                    <button class="setting__value" data-property="fontWeight" data-value="normal">Normal</button>
-                    <button class="setting__value" data-property="fontWeight" data-value="bold">Bold</button>
+                    <div style="display:inline-block;">
+                        <div class="text-1">
+                            <input type="text" id="font-weight">
+                        </div>
+                        <div>
+                            <div class="slider-bar" id="font-weight-slider"></div>
+                        </div>
+                    </div>
                 </div>
                 <div class="l-row-p15">
                     <label for="" class="setting__property">Decoration:</label>
@@ -136,8 +185,8 @@
             <div class="panel__body">
                 <div class="shadows__heading"><span>offset-x</span><span>offset-y</span><span>blur-radius</span></div>
                 <ul class="shadows__container"></ul>
-                <div>
-                    <div><a id="add-shadow-btn" class="btn-type-3">Add Shadow</a></div>
+                <div class="add-shadow">
+                    <div><a id="add-shadow-btn" class="btn-type-3"><span class="add"></span></span>Add Shadow</a></div>
                     <div id="add-shadow">
                         <textarea id="add-shadow__input"></textarea>
                         <div>
@@ -214,22 +263,42 @@
     <button id="import-css-btn-ok">Import</button>
 </div>
 <div id="get-css-dialog">
-    <div id="show-code"></div>
-    <label for="color-format">format:</label>
-    <select id="color-format">
+</div>
+
+<div id="get-font-link-dialog">
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">CSS</a></li>
+            <li><a href="#tabs-2">Google Font Link</a></li>
+        </ul>
+        <div id="tabs-1">
+            <div id="show-code"></div>
+
+            <label for="color-format">format:</label>
+            <select id="color-format">
+            <option value="rgba">rgba</option>
             <option value="hex">hex</option>
             <option value="hsla">hsla</option>
-            <option value="rgba">rgba</option>
         </select>
-    <button class="btn-type-2" id="get-copy-css" data-clipboard-target="#show-code"><span></span>Copy to Clipboard</button>
-    <div class="l-pull-right"><button class="btn-share"></button><button class="btn-share"></button><button class="btn-share"></button></div>
+            <button class="btn-type-2" id="get-copy-css" data-clipboard-target="#show-code"><span class="copy"></span>Copy to Clipboard</button>
+            <div class="l-pull-right">
+                <button class="btn-share codepen"></button>
+                <button class="btn-share facebook"></button>
+                <button class="btn-share twitter"></button></div>
+        </div>
+        <div id="tabs-2">
+            <div id="font-link"></div>
+            <button class="btn-type-2" id="copy-font-link" data-clipboard-target="#font-link"><span class="copy"></span>Copy to Clipboard</button>
+        </div>
+    </div>
+</div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js"></script>
-<script src="presets.js"></script>
-<script type="text/javascript" src="script.min.js"></script>
+<script src="boxshadows.js"></script>
+<script type="text/javascript" src="text-shadow.js"></script>
 
 </html>
