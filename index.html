@@ -31,95 +31,95 @@
             <button id="get-css-btn" class="btn-type-2"><span class="get-css"></span>Get CSS</button>
         </div>
     </nav>
-
-    <section class="col">
-        <div class="panel">
-            <div class="panel__heading">
-                <h2>Presets</h2>
-                <div class="l-pull-right">
-                    <a class="btn-type-3" id="import-css-btn"><span class="import-css"></span>Import</a>
-                    <button class="btn-type-2" id="save-preset-btn"><span class="save-preset"></span>Save</button>
-                    <button class="btn-type-2" id="delete-preset-btn"><span class="delete-preset"></span>Delete</button>
+    <section>
+        <section class="col">
+            <div class="panel">
+                <div class="panel__heading">
+                    <h2>Presets</h2>
+                    <div class="l-pull-right">
+                        <a class="btn-type-3" id="import-css-btn"><span class="import-css"></span>Import</a>
+                        <button class="btn-type-2" id="save-preset-btn"><span class="save-preset"></span>Save</button>
+                        <button class="btn-type-2" id="delete-preset-btn"><span class="delete-preset"></span>Delete</button>
+                        <div class="panel__toggle toggle-on"></div>
+                    </div>
+                </div>
+                <div class="panel__body">
+                    <ul class="presets-list">
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="col">
+            <div class="panel">
+                <div class="panel__heading">
+                    <h2>Preview</h2>
                     <div class="panel__toggle toggle-on"></div>
                 </div>
-            </div>
-            <div class="panel__body">
-                <ul class="presets-list">
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="col">
-        <div class="panel">
-            <div class="panel__heading">
-                <h2>Preview</h2>
-                <div class="panel__toggle toggle-on"></div>
-            </div>
-            <div class="panel__body">
-                <div id="textShadowPreview" contenteditable="true" spellcheck="false">PREVIEW</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="col" style="width: 50%; float: left;">
-        <div class="panel">
-            <div class="panel__heading">
-                <h2>Properties</h2>
-                <div class="panel__toggle toggle-on"></div>
-            </div>
-            <div class="panel__body">
-                <div class="l-row-p15">
-                    <label for="" class="setting__property">Color:</label>
-                    <input type="text" name="textColor" id="textColor">
+                <div class="panel__body">
+                    <div id="textShadowPreview" contenteditable="true" spellcheck="false">PREVIEW</div>
                 </div>
-                <div class="l-row-p15">
-                    <label for="" class="setting__property">Background Color:</label>
-                    <input type="text" name="backgroundColor" id="backgroundColor">
-                </div>
+            </div>
+        </section>
 
-                <div class="l-row-p15">
-                    <label class="setting__property">Font Size:</label>
-                    <div style="display: inline-block;">
-                        <div class="text-1">
-                            <input type="text" id="font-size">
+        <section class="col" style="width: 50%; float: left;">
+            <div class="panel">
+                <div class="panel__heading">
+                    <h2>Properties</h2>
+                    <div class="panel__toggle toggle-on"></div>
+                </div>
+                <div class="panel__body">
+                    <div class="l-row-p15">
+                        <label for="" class="setting__property">Color:</label>
+                        <input type="text" name="textColor" id="textColor">
+                    </div>
+                    <div class="l-row-p15">
+                        <label for="" class="setting__property">Background Color:</label>
+                        <input type="text" name="backgroundColor" id="backgroundColor">
+                    </div>
+
+                    <div class="l-row-p15">
+                        <label class="setting__property">Font Size:</label>
+                        <div style="display: inline-block;">
+                            <div class="text-1">
+                                <input type="text" id="font-size">
+                            </div>
+
+                            <div>
+                                <div class="slider-bar" id="font-size-slider"></div>
+                            </div>
                         </div>
 
-                        <div>
-                            <div class="slider-bar" id="font-size-slider"></div>
+                    </div>
+                    <div class="l-row-p15">
+                        <label class="setting__property">Letter Spacing:</label>
+                        <div style="display: inline-block;">
+                            <div class="text-1">
+                                <input type="text" name="letter-spacing" id="letter-spacing">
+                                <input type="checkbox" id="letter-spacing-normal"><label>Normal</label>
+                            </div>
+                            <div>
+                                <div class="slider-bar" id="letter-spacing-slider"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-row-p15">
+                        <label class="setting__property">Word Spacing:</label>
+                        <div style="display: inline-block;">
+                            <div class="text-1">
+                                <input type="text" name="word-spacing" id="word-spacing">
+                                <input type="checkbox" id="word-spacing-normal"><label>Normal</label>
+                            </div>
+                            <div>
+                                <div class="slider-bar" id="word-spacing-slider"></div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-                <div class="l-row-p15">
-                    <label class="setting__property">Letter Spacing:</label>
-                    <div style="display: inline-block;">
-                        <div class="text-1">
-                            <input type="text" name="letter-spacing" id="letter-spacing">
-                            <input type="checkbox" id="letter-spacing-normal"><label>Normal</label>
-                        </div>
+                    <div class="l-row-p15">
+                        <label class="setting__property">Font Family:</label>
                         <div>
-                            <div class="slider-bar" id="letter-spacing-slider"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="l-row-p15">
-                    <label class="setting__property">Word Spacing:</label>
-                    <div style="display: inline-block;">
-                        <div class="text-1">
-                            <input type="text" name="word-spacing" id="word-spacing">
-                            <input type="checkbox" id="word-spacing-normal"><label>Normal</label>
-                        </div>
-                        <div>
-                            <div class="slider-bar" id="word-spacing-slider"></div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="l-row-p15">
-                    <label class="setting__property">Font Family:</label>
-                    <div>
-
-                        <!--
+                            <!--
                     <ul id="menu">
                         <li>
                             <div>Google Fonts</div>
@@ -131,122 +131,123 @@
                         <li><div>Impact</div></li>
                         <li><div>Lucida</div></li>
                     </ul>-->
-                        <select name="google-fonts" id="google-fonts"></select>
+                            <select name="google-fonts" id="google-fonts"></select>
 
-                    </div>
-                </div>
-                <div class="l-row-p15">
-                    <label for="" class="setting__property">Weight:</label>
-                    <div style="display:inline-block;">
-                        <div class="text-1">
-                            <input type="text" id="font-weight">
-                        </div>
-                        <div>
-                            <div class="slider-bar" id="font-weight-slider"></div>
                         </div>
                     </div>
-                </div>
-                <div class="l-row-p15">
-                    <label for="" class="setting__property">Decoration:</label>
-                    <button class="setting__value" data-property="textDecoration" data-value="none">None</button>
-                    <button class="setting__value" data-property="textDecoration" data-value="underline">Underline</button>
-                    <button class="setting__value" data-property="textDecoration" data-value="overline">Overline</button>
-                    <button class="setting__value" data-property="textDecoration" data-value="line-through">Line-Through</button>
-                </div>
-                <div class="l-row-p15">
-                    <label for="" class="setting__property">Style:</label>
-                    <button class="setting__value" data-property="fontStyle" data-value="normal">Normal</button>
-                    <button class="setting__value" data-property="fontStyle" data-value="unset">Unset</button>
-                    <button class="setting__value" data-property="fontStyle" data-value="italic">Italic</button>
-                    <button class="setting__value" data-property="fontStyle" data-value="oblique">Oblique</button>
-                </div>
-                <div class="l-row-p15">
-                    <label for="" class="setting__property">Variant:</label>
-                    <button class="setting__value" data-property="fontVariant" data-value="normal">Normal</button>
-                    <button class="setting__value" data-property="fontVariant" data-value="small-caps">Small Caps</button>
-                </div>
-                <div class="l-row-p15">
-                    <label for="" class="setting__property">Transform:</label>
-                    <button class="setting__value" data-property="textTransform" data-value="none">None</button>
-                    <button class="setting__value" data-property="textTransform" data-value="uppercase">Uppercase</button>
-                    <button class="setting__value" data-property="textTransform" data-value="lowercase">Lowercase</button>
-                    <button class="setting__value" data-property="textTransform" data-value="capitalize">Capitalize</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="col" style="width: 50%; float: right;">
-        <div class="panel">
-            <div class="panel__heading">
-                <h2>Shadows</h2>
-                <div class="panel__toggle toggle-on"></div>
-            </div>
-            <div class="panel__body">
-                <div class="shadows__heading"><span>offset-x</span><span>offset-y</span><span>blur-radius</span></div>
-                <ul class="shadows__container"></ul>
-                <div class="add-shadow">
-                    <div><a id="add-shadow-btn" class="btn-type-3"><span class="add"></span></span>Add Shadow</a></div>
-                    <div id="add-shadow">
-                        <textarea id="add-shadow__input"></textarea>
-                        <div>
-                            <button id="add-shadow-accept">accept</button>
-                            <button id="add-shadow-cancel">cancel</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="adjust-color" style="display: none;">
-                    <div class="adjust-color__center">
-                        <div class="adjust-color__settings">
-                            <div class="l-col-w254" style="float: left;">
-                                <div class="l-setting-block">
-                                    <div class="l-spinner-row">
-                                        <label for="hue">Hue</label>
-                                        <div class="text-1">
-                                            <input id="hue" type="text" value="0" />
-                                        </div>
-                                    </div>
-                                    <div class="slider-bar hsl-slider" id="hue-bar"></div>
-                                </div>
-                                <div class="l-setting-block">
-                                    <div class="l-spinner-row">
-                                        <label for="lightness">Lightness</label>
-                                        <div class="text-1">
-                                            <input id="lightness" type="text" value="0" />
-                                        </div>
-                                    </div>
-                                    <div class="slider-bar hsl-slider" id="lightness-bar"></div>
-                                </div>
+                    <div class="l-row-p15">
+                        <label for="" class="setting__property">Weight:</label>
+                        <div style="display:inline-block;">
+                            <div class="text-1">
+                                <input type="text" id="font-weight">
                             </div>
-                            <div class="l-col-w254">
-                                <div class="l-setting-block">
-                                    <div class="l-spinner-row">
-                                        <label for="saturation">Saturation</label>
-                                        <div class="text-1">
-                                            <input id="saturation" type="text" value="0" />
-                                        </div>
-                                    </div>
-                                    <div class="slider-bar hsl-slider" id="saturation-bar"></div>
-                                </div>
-                                <div class="l-setting-block">
-                                    <div class="l-spinner-row">
-                                        <label for="opacity">Opacity</label>
-                                        <div class="text-1">
-                                            <input id="opacity" type="text" value="0" />
-                                        </div>
-                                    </div>
-                                    <div class="slider-bar hsl-slider" id="opacity-bar"></div>
-                                </div>
+                            <div>
+                                <div class="slider-bar" id="font-weight-slider"></div>
                             </div>
                         </div>
-                        <div>
-                            <button id="adjust-color-accept">accept</button>
-                            <button id="adjust-color-cancel" style="float: right;">cancel</button>
+                    </div>
+                    <div class="l-row-p15">
+                        <label for="" class="setting__property">Decoration:</label>
+                        <button class="setting__value" data-property="textDecoration" data-value="none">None</button>
+                        <button class="setting__value" data-property="textDecoration" data-value="underline">Underline</button>
+                        <button class="setting__value" data-property="textDecoration" data-value="overline">Overline</button>
+                        <button class="setting__value" data-property="textDecoration" data-value="line-through">Line-Through</button>
+                    </div>
+                    <div class="l-row-p15">
+                        <label for="" class="setting__property">Style:</label>
+                        <button class="setting__value" data-property="fontStyle" data-value="normal">Normal</button>
+                        <button class="setting__value" data-property="fontStyle" data-value="unset">Unset</button>
+                        <button class="setting__value" data-property="fontStyle" data-value="italic">Italic</button>
+                        <button class="setting__value" data-property="fontStyle" data-value="oblique">Oblique</button>
+                    </div>
+                    <div class="l-row-p15">
+                        <label for="" class="setting__property">Variant:</label>
+                        <button class="setting__value" data-property="fontVariant" data-value="normal">Normal</button>
+                        <button class="setting__value" data-property="fontVariant" data-value="small-caps">Small Caps</button>
+                    </div>
+                    <div class="l-row-p15">
+                        <label for="" class="setting__property">Transform:</label>
+                        <button class="setting__value" data-property="textTransform" data-value="none">None</button>
+                        <button class="setting__value" data-property="textTransform" data-value="uppercase">Uppercase</button>
+                        <button class="setting__value" data-property="textTransform" data-value="lowercase">Lowercase</button>
+                        <button class="setting__value" data-property="textTransform" data-value="capitalize">Capitalize</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="col" style="width: 50%; float: right;">
+            <div class="panel">
+                <div class="panel__heading">
+                    <h2>Shadows</h2>
+                    <div class="panel__toggle toggle-on"></div>
+                </div>
+                <div class="panel__body">
+                    <div class="shadows__heading"><span>offset-x</span><span>offset-y</span><span>blur-radius</span></div>
+                    <ul class="shadows__container"></ul>
+                    <div class="add-shadow">
+                        <div><a id="add-shadow-btn" class="btn-type-3"><span class="add"></span></span>Add Shadow</a></div>
+                        <div id="add-shadow">
+                            <textarea id="add-shadow__input"></textarea>
+                            <div>
+                                <button id="add-shadow-accept">accept</button>
+                                <button id="add-shadow-cancel">cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="adjust-color" style="display: none;">
+                        <div class="adjust-color__center">
+                            <div class="adjust-color__settings">
+                                <div class="l-col-w254" style="float: left;">
+                                    <div class="l-setting-block">
+                                        <div class="l-spinner-row">
+                                            <label for="hue">Hue</label>
+                                            <div class="text-1">
+                                                <input id="hue" type="text" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="slider-bar hsl-slider" id="hue-bar"></div>
+                                    </div>
+                                    <div class="l-setting-block">
+                                        <div class="l-spinner-row">
+                                            <label for="lightness">Lightness</label>
+                                            <div class="text-1">
+                                                <input id="lightness" type="text" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="slider-bar hsl-slider" id="lightness-bar"></div>
+                                    </div>
+                                </div>
+                                <div class="l-col-w254">
+                                    <div class="l-setting-block">
+                                        <div class="l-spinner-row">
+                                            <label for="saturation">Saturation</label>
+                                            <div class="text-1">
+                                                <input id="saturation" type="text" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="slider-bar hsl-slider" id="saturation-bar"></div>
+                                    </div>
+                                    <div class="l-setting-block">
+                                        <div class="l-spinner-row">
+                                            <label for="opacity">Opacity</label>
+                                            <div class="text-1">
+                                                <input id="opacity" type="text" value="0" />
+                                            </div>
+                                        </div>
+                                        <div class="slider-bar hsl-slider" id="opacity-bar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <button id="adjust-color-accept">accept</button>
+                                <button id="adjust-color-cancel" style="float: right;">cancel</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </section>
     <footer>
         <ul>

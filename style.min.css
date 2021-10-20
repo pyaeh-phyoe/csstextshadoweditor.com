@@ -187,7 +187,7 @@
      padding: 0;
      margin: 0;
      max-height: 250px;
-    overflow: auto;
+     overflow: auto;
  }
  
  .load-preset {
@@ -203,26 +203,24 @@
      overflow: hidden;
  }
  
-
-
  .btn-type-2 {
-    display: inline-block;
-    border: 1px solid #c5c5c5;
-    cursor: pointer;
-    background-color: #f6f6f6;
-    padding: 0px 15px 0px 0px;
-    appearance: none;
-    font-weight: bold;
-    color: #6E6E6E;
-}
-
- .text-1 {
-    display: inline-block;
-    margin-bottom: 10px;
+     display: inline-block;
+     border: 1px solid #c5c5c5;
+     cursor: pointer;
+     background-color: #f6f6f6;
+     padding: 0px 15px 0px 0px;
+     appearance: none;
+     font-weight: bold;
+     color: #6E6E6E;
  }
-
+ 
+ .text-1 {
+     display: inline-block;
+     margin-bottom: 10px;
+ }
+ 
  .text-1 input {
-    width: 2em;
+     width: 2em;
  }
  
  .col {
@@ -243,9 +241,11 @@
  .l-row-p15 {
      padding-bottom: 15px;
  }
+ 
  .shadow>div {
      float: left;
  }
+ 
  .hide {
      float: left;
      -webkit-appearance: none;
@@ -258,13 +258,13 @@
      border-radius: 3px;
      background-color: #f6f6f6;
      background-image: url(sprite-111.png);
-     background-position: -126px 0; 
+     background-position: -126px 0;
  }
-
+ 
  .hide:checked {
      background-image: url(sprite-222.png);
  }
-
+ 
  .handle {
      width: 10px;
      height: 32px;
@@ -272,7 +272,7 @@
      margin-left: 6px;
      cursor: move;
      background-image: url(sprite-000.png);
-     background-position: -84px 0; 
+     background-position: -84px 0;
      float: right !important;
  }
  
@@ -285,9 +285,9 @@
      background-image: url(sprite-111.png);
      background-position: -42px 0;
  }
-
+ 
  .remove:hover {
-    background-image: url(sprite-222.png);
+     background-image: url(sprite-222.png);
  }
  
  .setting__property {
@@ -324,20 +324,18 @@
      text-decoration: none;
      color: #333;
  }
-
+ 
  .btn-type-3 span {
-    width: 32px;
-    height: 32px;
-    display: inline-block;
-    vertical-align: middle;
-}
+     width: 32px;
+     height: 32px;
+     display: inline-block;
+     vertical-align: middle;
+ }
  
  h1 a {
      color: #333;
      text-decoration: none;
  }
- 
- 
  
  .l-pull-right {
      float: right;
@@ -373,9 +371,9 @@
      vertical-align: middle;
      background-image: url(sprite-111.png);
  }
-
+ 
  .btn-share:hover {
-    background-image: url(sprite-222.png);
+     background-image: url(sprite-222.png);
  }
  
  #add-shadow__input {
@@ -384,13 +382,13 @@
      height: 100px;
      margin-bottom: 15px;
  }
-
+ 
  .actual {
-    border: 1px solid #777;
-    box-shadow: 0 0 5px rgb(250 128 0);
-}
-
-footer {
+     border: 1px solid #777;
+     box-shadow: 0 0 5px rgb(250 128 0);
+ }
+ 
+ footer {
      width: 100%;
      margin-top: 30px;
      padding: 40px 0px;
@@ -410,117 +408,122 @@ footer {
      justify-content: space-between !important;
      padding: 0;
  }
-
+ 
  .shadows__heading {
-    padding-left: 80px;
-    font-size: 12px;
-}
-
-.shadows__heading span {
-    width: 100px;
-    display: inline-block;
-    text-align: center;
-    margin: 0px 1px;
-}
-
-.shadows__container {
-    list-style-type: none;
-    padding-left: 0;
-    overflow: auto;
-    max-height: 510px;
-    padding: 2px;
-    margin: 0;
-}
-
-.freeze {
-}
-
-.freeze .bg-selected{
-    opacity: 0.3;
-}
-
-.freeze .sp-replacer{
-    opacity: 0.3;
-}
-
-.ui-menu { 
-    float: left;
-    width: 150px; 
-}
-
-#color-format-button {
-    width: 6em;
-}
-
-#google-font-link {
-    padding-bottom: 15px;
-}
-
-.toggle-on {
-    background-image: url(sprite-111.png);
-}
-
-.toggle-off {
-    background-image: url(sprite-222.png);
-}
-
-.codepen {
-    background-position: 0 0;
-}
-
-.facebook {
-    background-position: -84px 0; 
-}
-
-.twitter {
-    background-position: -202px 0;
-}
-
-.codepen:hover {
-    border-color: #010101;
-    background-color: #010101;
-}
-
-.facebook:hover {
-    border-color: #1976D2;
-    background-color: #1976D2;
-}
-
-.twitter:hover {
-    border-color: #03A9F4;
-    background-color: #03A9F4;
-}
-
-.save-preset {
-    background-image: url(sprite-000.png);
-    background-position: -230px 0;
-}
-
-.delete-preset {
-    background-image: url(sprite-000.png);
-    background-position: -272px 0;
-}
-
-.import-css {
-    background-image: url(sprite-000.png);
-    background-position: -146px 0; 
-}
-
-.add {
-    background-image: url(sprite-000.png);
-    background-position: -188px 0;
-}
-
-.get-css {
-    background-image: url(sprite-000.png);
-    background-position: -104px 0;
-}
-
-.copy {
-    background-image: url(sprite-000.png);
-background-position: -42px 0;
-}
-
-#copy-font-link, #get-copy-css {
-    border-radius: 3px;
-}
+     padding-left: 80px;
+     font-size: 12px;
+ }
+ 
+ .shadows__heading span {
+     width: 100px;
+     display: inline-block;
+     text-align: center;
+     margin: 0px 1px;
+ }
+ 
+ .shadows__container {
+     list-style-type: none;
+     padding-left: 0;
+     overflow: auto;
+     max-height: 510px;
+     padding: 2px;
+     margin: 0;
+ }
+ 
+ .freeze {}
+ 
+ .freeze .bg-selected {
+     opacity: 0.3;
+ }
+ 
+ .freeze .sp-replacer {
+     opacity: 0.3;
+ }
+ 
+ .ui-menu {
+     float: left;
+     width: 150px;
+ }
+ 
+ #color-format-button {
+     width: 6em;
+ }
+ 
+ #google-font-link {
+     padding-bottom: 15px;
+ }
+ 
+ .toggle-on {
+     background-image: url(sprite-111.png);
+ }
+ 
+ .toggle-off {
+     background-image: url(sprite-222.png);
+ }
+ 
+ .codepen {
+     background-position: 0 0;
+ }
+ 
+ .facebook {
+     background-position: -84px 0;
+ }
+ 
+ .twitter {
+     background-position: -202px 0;
+ }
+ 
+ .codepen:hover {
+     border-color: #010101;
+     background-color: #010101;
+ }
+ 
+ .facebook:hover {
+     border-color: #1976D2;
+     background-color: #1976D2;
+ }
+ 
+ .twitter:hover {
+     border-color: #03A9F4;
+     background-color: #03A9F4;
+ }
+ 
+ .save-preset {
+     background-image: url(sprite-000.png);
+     background-position: -230px 0;
+ }
+ 
+ .delete-preset {
+     background-image: url(sprite-000.png);
+     background-position: -272px 0;
+ }
+ 
+ .import-css {
+     background-image: url(sprite-000.png);
+     background-position: -146px 0;
+ }
+ 
+ .add {
+     background-image: url(sprite-000.png);
+     background-position: -188px 0;
+ }
+ 
+ .get-css {
+     background-image: url(sprite-000.png);
+     background-position: -104px 0;
+ }
+ 
+ .copy {
+     background-image: url(sprite-000.png);
+     background-position: -42px 0;
+ }
+ 
+ #copy-font-link,
+ #get-copy-css {
+     border-radius: 3px;
+ }
+ 
+ .main {
+     width: 1380px;
+     margin: auto;
+ }
