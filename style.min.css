@@ -189,6 +189,7 @@
      margin: 0;
      max-height: 250px;
     overflow: auto;
+    font-family: Droid Sans;
  }
  
  .load-preset {
@@ -455,6 +456,10 @@ footer {
 
 #google-font-link {
     padding-bottom: 15px;
+}
+
+#google-fonts {
+    height: 32px;
 }
 
 .toggle-on {
