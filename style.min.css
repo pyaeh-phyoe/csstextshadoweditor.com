@@ -540,3 +540,32 @@ background-position: -42px 0;
 .text-1 input {
     width: 1.6em;
 }
+
+.nav li {
+    margin: -1px 0 0 0;
+    padding: 0;
+    display: inline-block;
+    border-top: 1px solid #ccc;
+}
+
+.nav .nav-selected {
+    border-top-color: #000;
+    font-weight: bold;
+}
+
+.nav {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.nav a {
+    color: #000;
+    display: block;
+    text-align: center;
+    padding: 12px 24px;
+}
+
+.nav-selected a {
+    color: #0366d6;
+}
